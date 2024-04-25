@@ -1,17 +1,17 @@
-// Selecionando elementos do DOM
-let time = document.getElementById("time"); // Elemento que exibirá a hora atual
+
+let time = document.getElementById("time"); // Exibir a hora atual
 let dateInput = document.getElementById("alarmDate"); // Input para a data do alarme
 let tInput = document.getElementById("alarmTime"); // Input para o horário do alarme
 let btn = document.getElementById("setAlarm"); // Botão para definir o alarme
-let contan = document.getElementById("alarms"); // Contêiner para listar os alarmes
+let contan = document.getElementById("alarms"); //Listar os alarmes
 
 // Variáveis para controle do tempo e dos alarmes
 let interVal; // Variável para armazenar o intervalo de tempo até o alarme
-let maxValue = 3; // Número máximo de alarmes permitidos
+let maxValue = 100; // Número máximo de alarmes permitidos
 let cnt = 0; // Contador de alarmes definidos
 let almTimesArray = []; // Array para armazenar os horários dos alarmes definidos
 
-// Função para atualizar a hora atual exibida
+// Função para atualizar a hora atual 
 function timeChangeFunction() {
     let curr = new Date();
     let hrs = curr.getHours();
@@ -32,30 +32,30 @@ function alarmSetFunction() {
     let now = new Date();
     let selectedDate = new Date(dateInput.value + "T" + tInput.value);
 
-    // Verificando se a data e o horário foram preenchidos
+    // Verifica se a data e o horário foram preenchidos
     if (!dateInput.value || !tInput.value) {
-        alert("Please select both date and time for the alarm.");
+        alert("Por favor, preencha a data e hora!");
         return;
     }
 
-    // Verificando se o horário do alarme é no futuro
+    // Verifica se o horário do alarme é no futuro
     if (selectedDate <= now) {
-        alert(`Invalid time. Please select a future date and time.`);
+        alert(`Tempo inválido.`);
         return;
     }
     
-    // Verificando se já existe um alarme definido para o mesmo horário
+    // Verifica se já existe um alarme definido para o mesmo horário
     if (almTimesArray.includes(selectedDate.toString())) {
-        alert(`You cannot set multiple alarms for the same time.`);
+        alert(`Já existe um alarme definido para essa hora.`);
         return;
     }
     
-    /// Verificando se o número máximo de alarmes foi atingido
+    //Verifica se o número máximo de alarmes foi atingido
 if (cnt < maxValue) {
-    // Calculando o tempo até o alarme
+
     let timeUntilAlarm = selectedDate - now;
 
-    // Criando uma nova div para representar o alarme na interface
+    // Criar uma nova div para mostrar o alarme na interface
     let alarmDiv = document.createElement("div");
     alarmDiv.classList.add("alarm");
     alarmDiv.innerHTML = `
@@ -67,64 +67,45 @@ if (cnt < maxValue) {
         </button>
     `;
     
-    // Adicionando um evento de clique ao botão de deletar o alarme
+    //Event Listener de click ao botão de apagar alarme
     alarmDiv.querySelector(".delete-alarm").addEventListener("click", () => {
-        // Removendo a div do alarme
+    
         alarmDiv.remove();
-        // Atualizando o contador de alarmes
+        // Atualizar o contador de alarmes qur agr é menos um 
         cnt--;
-        // Cancelando o timeout do alarme
+    
         clearTimeout(interVal);
-        // Removendo o horário do alarme da lista de horários
+        // Remove o horário do alarme da lista de horários
         const idx = almTimesArray.indexOf(selectedDate.toString());
         if (idx !== -1) {
             almTimesArray.splice(idx, 1);
         }
     });
     
-    // // Configurando o timeout para exibir o alerta quando o alarme disparar
-    // interVal = setTimeout(() => {
-    //     alert("Time to wake up!");
-    //     // Removendo a div do alarme
-    //     alarmDiv.remove();
-    //     // Atualizando o contador de alarmes
-    //     cnt--;
-    //     // Removendo o horário do alarme da lista de horários
-    //     const alarmIndex = almTimesArray.indexOf(selectedDate.toString());
-    //     if (alarmIndex !== -1) {
-    //         almTimesArray.splice(alarmIndex, 1);
-    //     }
-    // }, timeUntilAlarm);
-    
 
-// Configurando o timeout para redirecionar para a nova página quando o alarme disparar
+// Configura o timeout para redirecionar para página quando o alarme disparar
 interVal = setTimeout(() => {
-    // Removendo a div do alarme
     alarmDiv.remove();
-    // Atualizando o contador de alarmes
     cnt--;
-    // Removendo o horário do alarme da lista de horários
+    // Remover o horário do alarme da lista de horários
     const alarmIndex = almTimesArray.indexOf(selectedDate.toString());
     if (alarmIndex !== -1) {
         almTimesArray.splice(alarmIndex, 1);
     }
-    // Redirecionando para a nova página
-    window.location.href = 'nova_pagina.html'; // Substitua 'nova_pagina.html' pelo URL da sua página HTML
+    // Redireciona para a página 
+    window.location.href = 'lembrete.html'; 
 }, timeUntilAlarm);
 
 
 
-
-
-    // Adicionando a div do alarme ao contêiner de alarmes
+    // Adiciona a div do alarme ao container de alarmes
     contan.appendChild(alarmDiv);
     
-    // Atualizando o contador de alarmes e a lista de horários de alarme
+    // Atualiza o contador de alarmes e a lista de horários de alarme
     cnt++;
     almTimesArray.push(selectedDate.toString());
 } else {
-    // Exibindo um alerta quando o número máximo de alarmes é atingido
-    alert("You can only set a maximum of 3 alarms.");
+    alert("Não pode definir mais de 100 alarmes");
 }
 
 }
@@ -145,7 +126,6 @@ function showAlarmFunction() {
         });
     });
 }
-
 
 
 // Chamada inicial para exibir a hora atual
