@@ -148,8 +148,6 @@ function showAlarmFunction() {
 
 
 
-
-
 // Chamada inicial para exibir a hora atual
 timeChangeFunction();
 
@@ -161,3 +159,6 @@ btn.addEventListener("click", alarmSetFunction);
 
 // Chamada para exibir os alarmes existentes
 showAlarmFunction();
+
+
+
