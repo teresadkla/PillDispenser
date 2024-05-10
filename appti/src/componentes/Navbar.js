@@ -1,7 +1,7 @@
 import React from 'react';
 function Navbar({ alarme, home, areaPessoal }) {
     return (
-      <div>
+      <div id="navbar">
 
 
         <h4>
@@ -22,7 +22,7 @@ function Navbar({ alarme, home, areaPessoal }) {
   }
      /*
       nunca posso retornar duas divs 
-      nunxa escrever mais de um componente por ficheiro 
+      nunca escrever mais de um componente por ficheiro 
       */
   
   

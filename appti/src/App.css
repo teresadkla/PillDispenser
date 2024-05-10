@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+/* Media query mobile */
+@media (max-width: 600px) {
+
+ 
+}
+
+#navbar{
+     /* position: fixed; */
+     display: inline-flex;
+     gap: 2%;
+     width: 100%;
+}

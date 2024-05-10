@@ -10,6 +10,7 @@ function App() {
       <h2>Hoje, 10 de maio</h2>
       <h2>Plano de hoje</h2>
       <h6>Pequeno Almoço - 8h15min</h6>
+      
       <Cardplano nome="Nomex" dose="1" tubo="tubo x" />
       <Navbar alarme="" home="" areaPessoal="" />
 
