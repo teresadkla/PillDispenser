@@ -8,7 +8,7 @@ import Navbar from "./componentes/Navbar";
 function App() {
   return (
     <div id="testedashboard">
-      <h2>Teste</h2>
+      <h2>Olá, Teresa</h2>
       <Navbar alarme="" home="" areaPessoal=""/>
     </div>
   )
