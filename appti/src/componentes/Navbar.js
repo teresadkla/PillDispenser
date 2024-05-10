@@ -4,17 +4,17 @@ function Navbar({ alarme, home, areaPessoal }) {
       <div>
 
 
-        <h3>
+        <h4>
           <a href={alarme}>Alarme</a>
-        </h3>
+        </h4>
 
-        <h3>
+        <h4>
           <a href={home}>Home</a>
-        </h3>
+        </h4>
 
-        <h3>
+        <h4>
           <a href={areaPessoal}>Área Pessoal</a>
-        </h3>
+        </h4>
 
         
       </div>
