@@ -42,7 +42,6 @@
 
 }
 
-
 #navbar{
      /* position: fixed; */
      display: inline-flex;
@@ -55,8 +54,17 @@
   display: flex;
   gap: 10%;
   width: 60%;
+  padding: 2%;
+  border-radius: 6px;
 }
 
 .LabelPlano{
 
+}
+
+#DiaDiv{
+  background: gainsboro;
+  width: fit-content;
+  padding: 2%;
+  border-radius: 6px;
 }
