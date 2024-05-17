@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+/* Media query mobile */
+@media (max-width: 600px) {
+
+}
+
+#navbar{
+     /* position: fixed; */
+     display: inline-flex;
+     gap: 2%;
+     width: 100%;
+}
+
+#CardPlano{
+  background: gainsboro;
+  display: flex;
+  gap: 10%;
+  width: 60%;
+  padding: 2%;
+  border-radius: 6px;
+}
+
+.LabelPlano{
+
+}
+
+#DiaDiv{
+  background: gainsboro;
+  width: fit-content;
+  padding: 2%;
+  border-radius: 6px;
+}
