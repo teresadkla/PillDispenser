@@ -112,7 +112,7 @@ void loop() {
     if(distance <= 10){
       // abrir porta
       gaveta.write(180);
-      delay(10000);
+      delay(1000);
       gaveta.write(0);
     }
   }

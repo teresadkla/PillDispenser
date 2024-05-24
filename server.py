@@ -4,7 +4,6 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-
 import serial as s
 import schedule
 import time
@@ -20,17 +19,26 @@ ser = s.Serial(
             )
 time.sleep(2)
 
-all_meals = []
 
+all_meals = []
 #################### CLASSES
 class Meal:
     def __init__(self, name, hours, minutes, pills):
         self.name = name
-        self.hours = hours
-        self.minutes = minutes
+        if(hours < 10):
+            self.hours = f'0{hours}'
+        else:
+            self.hours = hours
+        
+        if(minutes < 10):
+            self.minutes = f'0{minutes}'
+        else:
+            self.minutes = minutes
+
         self.pills = pills
 
-        #schedule.every().day.at(f'{self.hours}:{self.minutes}').do(dispense, pills=self.pills)
+
+        schedule.every().day.at(f'{self.hours}:{self.minutes}').do(dispense, pills=self.pills)
 
 class Pill:
     def __init__(self, name, container):
@@ -57,7 +65,7 @@ def dispense(pills):
     angles = [str(pill.container_angle) for pill in pills]
     angles = (',').join(angles)
     print(angles)
-    write(angles)
+    #write(angles)
 
 
 def list():
@@ -94,7 +102,7 @@ def load_to_class():
     mealData = load_file()
     for meal in mealData["meals"]:
         pillsData = [Pill(pill_data["name"], pill_data["container"]) for pill_data in meal["pills"]]
-        mealObj = Meal(meal["name"],meal["hours"],meal["minutes"],pillsData)
+        mealObj = Meal(meal["name"],int(meal["hours"]),int(meal["minutes"]),pillsData)
         all_meals.append(mealObj)
 
 ### LOAD FROM FILE
@@ -108,7 +116,6 @@ def save_file(data):
 
 ### SAVE MEAL TO FILE
 def save_meal(meal):
-    dispense(meal.pills)
     all_meals.append(meal)
     new_data = {
         "name": meal.name,
