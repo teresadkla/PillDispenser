@@ -42,24 +42,22 @@
 
 }
 
-#navbar{
-     /* position: fixed; */
-     display: inline-flex;
-     gap: 2%;
-     width: 100%;
+#testedashboard{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  height: calc(100vh - 10px);
 }
 
-#CardPlano{
-  background: gainsboro;
-  display: flex;
-  gap: 10%;
-  width: 60%;
-  padding: 2%;
-  border-radius: 6px;
+#olauser{
+  grid-column: 1/ span 8;
+  grid-row: 1/ span 1;
+
 }
 
-.LabelPlano{
-
+#hoje{
+  grid-column: 1/ span 10;
+  grid-row: 2/ span 1;
 }
 
 #DiaDiv{
@@ -67,4 +65,95 @@
   width: fit-content;
   padding: 2%;
   border-radius: 6px;
+  grid-column: 1/ span 10;
+  grid-row: 3/ span 1;
+
+}
+
+#PlanoHoje{
+  grid-column: 1/ span 10;
+  grid-row: 5/ span 8;
+}
+
+#refeicao{
+  grid-column: 1/ span 10;
+  grid-row: 6/ span 1;
+}
+
+#CardPlano{
+  background: gainsboro;
+  display: flex;
+  gap: 10%;
+  width: 100%;
+  padding: 2%;
+  border-radius: 6px;
+  grid-column: 1/ span 10;
+  grid-row: 7/ span 1;
+  
+}
+
+
+#navbar{
+     /* position: fixed; */
+  position: fixed;
+    display: inline-flex;
+    top: 90%;
+    gap: 15%;
+    width: 100%;
+}
+
+
+
+.LabelPlano{
+
+}
+
+
+/* Exemplo de App.css */
+.my-container {
+  /* Adicione os estilos desejados */
+  grid-column: 1 / span 10;
+  grid-row: 3 / span 1;
+ 
+}
+
+.my-day-circle-container {
+  /* Adicione os estilos desejados */
+}
+
+.my-prev-week-arrow {
+  /* Adicione os estilos desejados */
+  
+}
+
+.my-next-week-arrow {
+  /* Adicione os estilos desejados */
+}
+
+.my-day-box {
+  /* Adicione os estilos desejados */
+  padding: 2%;
+  display: flex;
+  gap: 4%;
+}
+
+.my-day-circle {
+  background-color: yellowgreen;
+  /* Adicione os estilos desejados */
+}
+
+.my-day-circle-today-text {
+  /* Adicione os estilos desejados */
+}
+
+.my-day-circle-unavailable {
+  /* Adicione os estilos desejados */
+}
+
+.my-day-circle-unavailable-text {
+  /* Adicione os estilos desejados */
+}
+
+.my-day-circle-selected {
+  /* Adicione os estilos desejados */
 }
