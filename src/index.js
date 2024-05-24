@@ -18,6 +18,7 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
     children: [
+
       {
         path: 'add_meal',
         element: <AddMeal />
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
         path: 'add_pills',
         element: <AddPills />
       },
+
       {
         path: 'card',
         element: <CardPlano />
@@ -38,6 +40,7 @@ const router = createBrowserRouter([
         path: 'day',
         element: <Day />
       }
+      
     ]
   },
 

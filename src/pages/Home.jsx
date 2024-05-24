@@ -1,7 +1,8 @@
 //import logo from './logo.svg';
-import './Home.css';
-import Cardplano from "./componentes/Cardplano";
-import Day from "./componentes/Day";
+
+import '../App.css';
+import Cardplano from "./Cardplano";
+import Day from "./Day"; 
 
 function Home() {
   return (
@@ -18,4 +19,4 @@ function Home() {
   )
 }
 
-export default App;
+export default Home;
