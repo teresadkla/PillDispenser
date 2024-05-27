@@ -19,10 +19,17 @@ function Home() {
     dayCircleSelected: 'my-day-circle-selected',
   };
 
+  const today = new Date();
+  const formattedToday = today.toLocaleDateString('pt-PT', {
+    day: 'numeric',
+    month: 'long',
+    //year: 'numeric',
+  });
+
   return (
     <div id="testedashboard">
       <h3 id="olauser">Olá, Teresa</h3>
-      <h2 id="hoje">Hoje, 10 de maio</h2>
+      <h2 id="hoje">Hoje, {formattedToday}</h2>
 
       <ReactWeeklyDayPicker classNames={classNames} />
 
