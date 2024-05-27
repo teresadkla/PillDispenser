@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Nav = () => {
   return (
-    <nav>
+    <nav id="navbar">
+      
       <h4>
           <a>Alarme</a>
         </h4>
@@ -14,14 +15,14 @@ const Nav = () => {
           <a>Área Pessoal</a>
         </h4>
 
-      <ul>
+      {/* <ul>
         <li >
           <Link to="/add_meal">Add Meal</Link>
         </li>
         <li>
           <Link to="/list_meals">List Meals</Link>
         </li>
-      </ul>
+      </ul> */}
     </nav>
   );
 };
