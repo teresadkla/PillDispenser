@@ -123,7 +123,8 @@
 .my-day-circle-container {
   /* Adicione os estilos desejados */
   all: unset;
-  background: aliceblue;
+    background: pink;
+    border-radius: 5px;
 }
 
 .my-prev-week-arrow {
@@ -149,9 +150,19 @@
   background: beige;
   /* Adicione os estilos desejados */
 }
+.my-day-circle-container:first-of-type {
+  background: burlywood; 
+}
+
+.today {
+  background-color: #ffeb3b; /* Cor de fundo especial para o dia de hoje */
+  color: #000; /* Cor do texto para o dia de hoje */
+}
+
 
 .my-day-circle-today-text {
   /* Adicione os estilos desejados */
+  /* background-color: aqua; */
 }
 
 .my-day-circle-unavailable {
