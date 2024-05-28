@@ -1,8 +1,7 @@
 //import logo from './logo.svg';
 
 import '../App.css';
-import Cardplano from "./Cardplano";
-// import Day from "./Day"; 
+import Cardplano from "./Componentes/Cardplano";
 import ReactWeeklyDayPicker from 'react-weekly-day-picker';
 
 function Home() {

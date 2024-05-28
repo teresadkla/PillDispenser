@@ -10,9 +10,13 @@ import {
 import AddMeal from './pages/AddMeal';
 import ListMeals from './pages/ListMeals';
 import AddPills from './pages/AddPills';
-import CardPlano from './pages/Cardplano';
-import Day from './pages/Day';
+import CardPlano from './pages/Componentes/Cardplano';
+import Day from './pages/Componentes/Day';
 import Home from './pages/Home'; 
+import Alarmes from './pages/Componentes/Alarmes';
+import Medicamento from './pages/Componentes/Medicamento';
+import AreaPessoal from './pages/AreaPessoal';
+
 
 const router = createBrowserRouter([
   {
@@ -45,7 +49,21 @@ const router = createBrowserRouter([
       {
         path: 'day',
         element: <Day />
+      },
+      {
+        path: 'medicamento',
+        element: <Medicamento />
+      },
+      {
+        path: 'alarmes',
+        element: <Alarmes />
+      },
+      {
+        path: 'areapessoal',
+        element: <AreaPessoal />
       }
+      
+      
       
     ]
   },
