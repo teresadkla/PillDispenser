@@ -12,12 +12,18 @@ import ListMeals from './pages/ListMeals';
 import AddPills from './pages/AddPills';
 import CardPlano from './pages/Cardplano';
 import Day from './pages/Day';
+import Home from './pages/Home'; 
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     children: [
+
+      {
+        index: true, //para a home ser página inicial da app
+        element: <Home />
+      },
 
       {
         path: 'add_meal',

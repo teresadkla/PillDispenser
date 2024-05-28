@@ -79,8 +79,9 @@
 }
 
 #refeicao{
-  grid-column: 1/ span 10;
-  grid-row: 6/ span 1;
+  grid-column: 2 / span 10;
+  grid-row: 6 / span 1;
+  width: fit-content;
 }
 
 #CardPlano{
@@ -90,19 +91,21 @@
   width: 100%;
   padding: 2%;
   border-radius: 6px;
-  grid-column: 1/ span 10;
-  grid-row: 7/ span 1;
-  
+  grid-column: 2 / span 10;
+  grid-row:7 / span 1;
 }
 
 
 #navbar{
-     /* position: fixed; */
   position: fixed;
-    display: inline-flex;
-    top: 90%;
-    gap: 15%;
-    width: 100%;
+  display: flex;
+  top: 85%;
+  gap: 15%;
+  background: bisque;
+  padding: 2%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -163,4 +166,5 @@
 }
 
 .my-day-circle-selected {
+  background-color: #61dafb;
 }
