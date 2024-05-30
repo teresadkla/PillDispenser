@@ -62,10 +62,10 @@ const AddMeal = () => {
       <h1>Adicionar Alarme</h1>
 
       <form onSubmit={handleSubmit}>
-        <label>
-          Momento do dia
+        <div className="form-group">
+          <label>Momento do dia</label>
           <input type="text" value={name} onChange={handleNameChange} />
-        </label>
+        </div>
         <div className="Horário">
           <div className="time-input">
             <input type="number" value={hours} onChange={handleHoursChange} />
@@ -77,39 +77,30 @@ const AddMeal = () => {
           </div>
         </div>
 
-
         <div className="Medicamentos">
-          <label>
-            Medicamentos:
-            {Array.from({ length: numPills }, (_, i) => (
-              <div key={i}>
-                <label>
-                  Nome:
-                  <input
-                    type="text"
-                    value={pills[i]?.name || ''}
-                    onChange={(e) => handlePillsChange(i, 'name', e.target.value)}
-                  />
-                </label>
-                <br />
-                <label>
-                  Tubo:
-                  <input
-                    type="text"
-                    value={pills[i]?.container || ''}
-                    onChange={(e) => handlePillsChange(i, 'container', e.target.value)}
-                  />
-                </label>
-                <br />
-              </div>
-            ))}
-          </label>
+          <label>Medicamentos</label>
+          {Array.from({ length: numPills }, (_, i) => (
+            <div key={i} className="form-group">
+              <label>Nome</label>
+              <input
+                type="text"
+                value={pills[i]?.name || ''}
+                onChange={(e) => handlePillsChange(i, 'name', e.target.value)}
+              />
+              <label>Nº Tubo</label>
+              <input
+                type="text"
+                value={pills[i]?.container || ''}
+                onChange={(e) => handlePillsChange(i, 'container', e.target.value)}
+              />
+            </div>
+          ))}
         </div>
         <button type="button" onClick={() => changeNumPills(1)}>
-          Adicionar Medicamento
+          + adicionar medicamento
         </button>
         <button type="button" onClick={() => changeNumPills(-1)}>
-          Remover Medicamento
+          - remover medicamento
         </button>
         <br />
         <button type="submit">Confirmar</button>
