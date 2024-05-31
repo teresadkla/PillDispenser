@@ -1,7 +1,6 @@
 import '../ShowMeal.css';
 import React, { useEffect, useState } from 'react';
 import { getMeals } from '../api/meals';
-import { Link } from 'react-router-dom';
 
 const ShowMeal = () => {
   const [meal, setMeal] = useState(null);
@@ -22,27 +21,13 @@ const ShowMeal = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Meal Information</h1>
+    <div className="container">
+      <h1>Olá! Não se esqueça de tomar a sua medicação</h1>
       {meal ? (
-        <div>
-          <ul>
-            <li>Name: {meal.name}</li>
-            <li>
-              Time: {meal.hours}:{meal.minutes}
-            </li>
-            <li>
-              Pills:
-              <ul>
-                {meal.pills.map((pill) => (
-                  <li key={pill.id}>
-                    Name: {pill.name}, Container: {pill.container}
-                  </li>
-                ))}
-              </ul>
-            </li>
-          </ul>
-          <Link to='/add_pills' state={meal}>Add Pills</Link>
+        <div className="time-circle">
+          <span className="time">
+            {meal.hours}:{meal.minutes}
+          </span>
         </div>
       ) : (
         <p>No meal found</p>
