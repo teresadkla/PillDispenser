@@ -13,6 +13,7 @@ import AddPills from './pages/AddPills';
 import CardPlano from './pages/Cardplano';
 import Day from './pages/Day';
 import Home from './pages/Home'; 
+import ShowMeal from './pages/ShowMeal'; 
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: 'list_meals',
         element: <ListMeals />
+      },
+      {
+        path: 'show_meal',
+        element: <ShowMeal />
       },
       {
         path: 'add_pills',

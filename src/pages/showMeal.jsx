@@ -1,9 +1,9 @@
-import '../showMeal.css';
+import '../ShowMeal.css';
 import React, { useEffect, useState } from 'react';
 import { getMeals } from '../api/meals';
 import { Link } from 'react-router-dom';
 
-const ListMeals = () => {
+const ShowMeal = () => {
   const [meal, setMeal] = useState(null);
 
   useEffect(() => {
@@ -51,4 +51,4 @@ const ListMeals = () => {
   );
 };
 
-export default ListMeals;
+export default ShowMeal;
