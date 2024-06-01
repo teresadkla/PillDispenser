@@ -4,6 +4,7 @@ import '../css/App.css';
 import '../css/Home.css';
 import Cardplano from "./Componentes/Cardplano";
 import ReactWeeklyDayPicker from 'react-weekly-day-picker';
+import ListMeals from './ListMeals';
 
 function Home() {
   const classNames = {
@@ -40,6 +41,7 @@ function Home() {
       <h6 id="refeicao">Pequeno Almoço - 8h15min</h6>
 
       <Cardplano nome="Nomex" dose="1" tubo="tubo x" />
+      <ListMeals/>
       {/* <Navbar alarme="" home="" areaPessoal="" /> */}
     </div>
   );
