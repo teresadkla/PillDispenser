@@ -1,6 +1,7 @@
 import Alarmes from "./Componentes/Alarmes";
 import Medicamento from "./Componentes/Medicamento";
-import '../App.css';
+import '../css/App.css';
+
 
 function AreaPessoal() {
   

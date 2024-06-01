@@ -1,5 +1,7 @@
 // import './App.css';
-import './App.css';
+// import './App.css';
+import './css/App.css';
+
 import { Outlet } from 'react-router-dom';
 import Nav from './shared/Nav';
 
