@@ -16,6 +16,7 @@ const AddMeal = () => {
     }
   ]);
 
+  
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
