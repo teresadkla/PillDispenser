@@ -1,6 +1,7 @@
 //import logo from './logo.svg';
 
 import '../css/App.css';
+import '../css/Home.css';
 import Cardplano from "./Componentes/Cardplano";
 import ReactWeeklyDayPicker from 'react-weekly-day-picker';
 

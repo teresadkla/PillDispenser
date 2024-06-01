@@ -1,0 +1,75 @@
+
+#testedashboard {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    height: calc(100vh - 10px);
+  }
+  
+  #olauser {
+    grid-column: 2 / span 4;
+    grid-row: 1 / span 1;
+    width: fit-content;
+  
+  }
+  
+  #hoje {
+    grid-column: 2/ span 6;
+    grid-row: 2/ span 1;
+    width: fit-content;
+  
+  }
+  #PlanoHoje {
+    grid-column: 2 / span 10;
+    grid-row: 5 / span 1;
+    width: fit-content;
+  }
+  
+  #refeicao {
+    grid-column: 2 / span 10;
+    grid-row: 6 / span 1;
+    width: fit-content;
+  }
+
+.my-day-circle-container {
+    all: unset;
+    background: pink;
+    border-radius: 5px;
+    width: 10%;
+    padding: 2%;
+  }
+  
+  .my-prev-week-arrow {}
+  
+  .my-next-week-arrow {}
+  
+  .my-day-box {
+    all: unset;
+    /* padding: 2%; */
+    display: flex;
+    gap: 2%;
+    margin-left: 3%;
+    /* width: 95vw; */
+    justify-content: center;
+  }
+  
+  .my-day-circle {
+    all: unset;
+    background: beige;
+  }
+  
+  .my-day-circle-container:first-of-type {
+    background: burlywood;
+  }
+  
+  .my-day-circle-today-text {
+    display: none;
+  }
+  
+  .my-day-circle-unavailable {}
+  
+  .my-day-circle-unavailable-text {}
+  
+  .my-day-circle-selected {
+    background-color: #61dafb;
+  }
