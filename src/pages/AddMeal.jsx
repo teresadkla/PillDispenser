@@ -1,4 +1,4 @@
-import '../AddMeal.css';
+import '../addmeal.css';
 import '../App.css';
 import React, { useState } from 'react';
 import sendMealInformation from '../api/meals';

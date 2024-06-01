@@ -1,4 +1,4 @@
-import '../ShowMeal.css';
+import '../showMeal.css';
 import React, { useEffect, useState } from 'react';
 import { getMeals } from '../api/meals';
 
@@ -17,7 +17,7 @@ const ShowMeal = () => {
       }
     };
 
-    
+
     fetchMeals();
   }, []);
 

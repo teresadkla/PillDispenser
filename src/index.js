@@ -13,7 +13,7 @@ import AddPills from './pages/AddPills';
 import CardPlano from './pages/Cardplano';
 import Day from './pages/Day';
 import Home from './pages/Home'; 
-import ShowMeal from './pages/ShowMeal'; 
+import ShowMeal from './pages/showMeal'; 
 
 const router = createBrowserRouter([
   {
