@@ -32,37 +32,37 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 /* Media query mobile */
-@media (max-width: 600px) {
+@media (max-width: 600px) {}
 
-}
-#testedashboard{
+#testedashboard {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
   height: calc(100vh - 10px);
 }
 
-#olauser{
+#olauser {
   grid-column: 2 / span 4;
   grid-row: 1 / span 1;
   width: fit-content;
 
 }
 
-#hoje{
+#hoje {
   grid-column: 2/ span 6;
   grid-row: 2/ span 1;
   width: fit-content;
 
 }
 
-#DiaDiv{
+#DiaDiv {
   background: gainsboro;
   width: fit-content;
   padding: 2%;
@@ -72,19 +72,19 @@
 
 }
 
-#PlanoHoje{
+#PlanoHoje {
   grid-column: 2 / span 10;
   grid-row: 5 / span 1;
   width: fit-content;
 }
 
-#refeicao{
+#refeicao {
   grid-column: 2 / span 10;
   grid-row: 6 / span 1;
   width: fit-content;
 }
 
-#CardPlano{
+#CardPlano {
   background: gainsboro;
   display: flex;
   gap: 10%;
@@ -92,14 +92,14 @@
   padding: 2%;
   border-radius: 6px;
   grid-column: 2 / span 10;
-  grid-row:7 / span 1;
+  grid-row: 7 / span 1;
 }
 
 
-#navbar{
+#navbar {
   position: fixed;
   display: flex;
-  top: 85%;
+  bottom: 0;
   gap: 15%;
   background: bisque;
   padding: 2%;
@@ -110,16 +110,14 @@
 
 
 
-.LabelPlano{
-
-}
+.LabelPlano {}
 
 
 .my-container {
   all: unset;
-    display: flex;
-    grid-column: 2 / span 10;
-    grid-row: 3 / span 1;
+  display: flex;
+  grid-column: 2 / span 10;
+  grid-row: 3 / span 1;
 }
 
 .my-day-circle-container {
@@ -130,12 +128,9 @@
   padding: 2%;
 }
 
-.my-prev-week-arrow {
-  
-}
+.my-prev-week-arrow {}
 
-.my-next-week-arrow {
-}
+.my-next-week-arrow {}
 
 .my-day-box {
   all: unset;
@@ -151,19 +146,18 @@
   all: unset;
   background: beige;
 }
+
 .my-day-circle-container:first-of-type {
-  background: burlywood; 
+  background: burlywood;
 }
 
 .my-day-circle-today-text {
   display: none;
 }
 
-.my-day-circle-unavailable {
-}
+.my-day-circle-unavailable {}
 
-.my-day-circle-unavailable-text {
-}
+.my-day-circle-unavailable-text {}
 
 .my-day-circle-selected {
   background-color: #61dafb;
