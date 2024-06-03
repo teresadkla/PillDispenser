@@ -100,10 +100,3 @@
 
 .LabelPlano {}
 
-
-.my-container {
-  all: unset;
-  display: flex;
-  grid-column: 2 / span 10;
-  grid-row: 3 / span 1;
-}

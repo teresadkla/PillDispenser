@@ -16,6 +16,7 @@ import Home from './pages/Home';
 import Alarmes from './pages/Componentes/Alarmes';
 import Medicamento from './pages/Componentes/Medicamento';
 import AreaPessoal from './pages/AreaPessoal';
+import MealsHome from './pages/Componentes/MealsHome';
 
 
 const router = createBrowserRouter([
@@ -61,7 +62,11 @@ const router = createBrowserRouter([
       {
         path: 'areapessoal',
         element: <AreaPessoal />
-      }
+      },
+      {
+        path: 'mealshome',
+        element: <MealsHome />
+      },
       
       
       

@@ -2,9 +2,9 @@
 
 import '../css/App.css';
 import '../css/Home.css';
-import Cardplano from "./Componentes/Cardplano";
+//import Cardplano from "./Componentes/Cardplano";
 import ReactWeeklyDayPicker from 'react-weekly-day-picker';
-import ListMeals from './ListMeals';
+import MealsHome from "./Componentes/MealsHome";
 
 function Home() {
   const classNames = {
@@ -40,8 +40,8 @@ function Home() {
       <h2 id="PlanoHoje">Plano de hoje</h2>
       <h6 id="refeicao">Pequeno Almoço - 8h15min</h6>
 
-      <Cardplano nome="Nomex" dose="1" tubo="tubo x" />
-      <ListMeals/>
+      {/* <Cardplano nome="Nomex" dose="1" tubo="tubo x" /> */}
+      <MealsHome/>
       {/* <Navbar alarme="" home="" areaPessoal="" /> */}
     </div>
   );
