@@ -23,7 +23,7 @@ const MealsHome = () => {
     <div id="CardPlano">
       <ul>
         {meals.map((meal) => (
-          <div key={meal.id}>
+          <div id="card" key={meal.id}>
             <ul>
               <li>Name: {meal.name}</li>
               <li>
@@ -36,11 +36,11 @@ const MealsHome = () => {
                     <li>Name: {pill.name}</li>
                     <li>Container: {pill.container}</li>
                     <br />
+                    <div id="esp"></div>
                   </ul>
                 ))}
               </li>
             </ul>
-            <Link to='/add_pills' state={meal}>Add Pills</Link>
           </div>
         ))}
       </ul>
