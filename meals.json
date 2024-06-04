@@ -249,6 +249,23 @@
                     "container_angle": 72
                 }
             ]
+        },
+        {
+            "name": "jantar23",
+            "hours": 20,
+            "minutes": 35,
+            "pills": [
+                {
+                    "name": "cora\u00e7\u00e3o",
+                    "container": "1",
+                    "container_angle": 36
+                },
+                {
+                    "name": "rins",
+                    "container": "3",
+                    "container_angle": 108
+                }
+            ]
         }
     ]
 }

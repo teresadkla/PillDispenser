@@ -1,4 +1,3 @@
-// src/components/MealsHome.js
 import React, { useEffect, useState } from 'react';
 import { getMeals } from '../../api/meals';
 import { Link } from 'react-router-dom';
@@ -19,6 +18,22 @@ const MealsHome = () => {
     fetchMeals();
   }, []);
 
+  const getTimePeriod = (hours) => {
+    if (hours >= 6 && hours < 12) {
+      return 'manhã';
+    } else if (hours >= 12 && hours < 14) {
+      return 'almoço';
+    } else if (hours >= 14 && hours < 19) {
+      return 'tarde';
+    } else if (hours >= 19 && hours < 21) {
+      return 'jantar';
+    } else if (hours >= 21 && hours < 24) {
+      return 'noite';
+    } else {
+      return 'madrugada';
+    }
+  };
+
   return (
     <div id="CardPlano">
       <ul>
@@ -27,7 +42,7 @@ const MealsHome = () => {
             <ul>
               <li>Name: {meal.name}</li>
               <li>
-                Time: {meal.hours}:{meal.minutes}
+                Time: {meal.hours}:{meal.minutes} - {getTimePeriod(meal.hours)}
               </li>
               <li>
                 Pills:
@@ -36,7 +51,6 @@ const MealsHome = () => {
                     <li>Name: {pill.name}</li>
                     <li>Container: {pill.container}</li>
                     <br />
-                    <div id="esp"></div>
                   </ul>
                 ))}
               </li>
