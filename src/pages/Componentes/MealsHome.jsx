@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const imageMapping = {
   'manhã': './Imagens/manha.png',
-  'almoço': './Imagens/almoço.png',
+  'almoço': './Imagens/almoco.png',
   'tarde': './Imagens/tarde.png',
   'jantar': './Imagens/jantar.png',
   'noite': './Imagens/noite.png',
