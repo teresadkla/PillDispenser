@@ -95,7 +95,7 @@
   display: flex;
   width: 100%;
   border-radius: 6px;
-  background: beige;
+  /* background: beige; */
   margin-bottom: 15%;
   text-align: left;
 
@@ -109,7 +109,7 @@ ul {
 
 .meal-time {
   position: relative;
-  top: -15%;
+  top: -20%;
 }
 
 .meal-info {
@@ -121,6 +121,7 @@ ul {
   flex: 2;
   /* flex: 2 1; */
   padding-left: 40vw;
+  margin-top: -40%;
 }
 
 #NomeMeal {}

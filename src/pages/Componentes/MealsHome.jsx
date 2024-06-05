@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { getMeals } from '../../api/meals';
 import { Link } from 'react-router-dom';
@@ -9,6 +10,15 @@ const imageMapping = {
   'jantar': './Imagens/jantar.png',
   'noite': './Imagens/noite.png',
   'madrugada': './Imagens/madrugada.png'
+};
+
+const colorMapping = {
+  'manhã': '#FFD66C',
+  'almoço': '#B3D06A',
+  'tarde': '#DB93F7',
+  'jantar': '#FF9A6C',
+  'noite': '#596DCA',
+  'madrugada': '#5E2C44'
 };
 
 const MealsHome = () => {
@@ -65,9 +75,10 @@ const MealsHome = () => {
         {sortedMeals.map((meal) => {
           const period = getTimePeriod(meal.hours);
           const imageUrl = imageMapping[period];
+          const backgroundColor = colorMapping[period];
           
           return (
-            <div id="card" key={meal.id}>
+            <div id="card" key={meal.id} style={{ backgroundColor }}>
               <ul>
                 <li className="meal-time">
                   <h5>{meal.hours}:{meal.minutes.toString().padStart(2, '0')} - {period}</h5>
