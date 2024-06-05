@@ -10,6 +10,9 @@ function App() {
   return (
     <div className="App">
       <Nav />
+      
+      {/* se for verdadeiro mostra o alarme, se for falso mostra o conteudo do outlet */}
+
       {currentAlarm ? <ShowMeal meal={currentAlarm} /> : <Outlet />}
     </div>
   );
