@@ -3,12 +3,12 @@ import { getMeals } from '../../api/meals';
 import { Link } from 'react-router-dom';
 
 const imageMapping = {
-  'manhã': './icons/manha.png',
-  'almoço': './icons/almoço.png',
-  'tarde': './icons/tarde.png',
-  'jantar': './icons/jantar.png',
-  'noite': './icons/noite.png',
-  'madrugada': './icons/madrugada.png'
+  'manhã': './Imagens/manha.png',
+  'almoço': './Imagens/almoço.png',
+  'tarde': './Imagens/tarde.png',
+  'jantar': './Imagens/jantar.png',
+  'noite': './Imagens/noite.png',
+  'madrugada': './Imagens/madrugada.png'
 };
 
 const MealsHome = () => {
