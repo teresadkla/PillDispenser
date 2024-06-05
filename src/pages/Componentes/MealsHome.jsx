@@ -14,11 +14,11 @@ const imageMapping = {
 
 const colorMapping = {
   'manhã': '#FFD66C',
-  'almoço': '#B3D06A',
-  'tarde': '#DB93F7',
-  'jantar': '#FF9A6C',
-  'noite': '#596DCA',
-  'madrugada': '#5E2C44'
+  'almoço': '#BED681',
+  'tarde': '#EEA6DE',
+  'jantar': '#E28888',
+  'noite': '#98A3D3',
+  'madrugada': '#B07692'
 };
 
 const MealsHome = () => {
@@ -59,10 +59,10 @@ const MealsHome = () => {
     return meals.slice().sort((a, b) => {
       const mealAMinutes = a.hours * 60 + a.minutes;
       const mealBMinutes = b.hours * 60 + b.minutes;
-      
+
       const diffA = (mealAMinutes - currentMinutes + 1440) % 1440;
       const diffB = (mealBMinutes - currentMinutes + 1440) % 1440;
-     
+
       return diffA - diffB;
     });
   };
@@ -76,17 +76,23 @@ const MealsHome = () => {
           const period = getTimePeriod(meal.hours);
           const imageUrl = imageMapping[period];
           const backgroundColor = colorMapping[period];
-          
+
           return (
-            <div id="card" key={meal.id} style={{ backgroundColor }}>
-              <ul>
-                <li className="meal-time">
-                  <h5>{meal.hours}:{meal.minutes.toString().padStart(2, '0')} - {period}</h5>
-                </li>
-                <div id="meal-info">
+            <div id="card" key={meal.id} >
+
+
+              <div >
+                <ul className="meal-info">
+
+                  <li className="meal-time" style={{ backgroundColor }}>
+                    <h5>{meal.hours}:{meal.minutes.toString().padStart(2, '0')} - {period}</h5>
+                  </li>
+
+
                   <div className="meal-image">
                     <img src={imageUrl} alt={period} />
                   </div>
+                  
                   <div className="meal-details">
                     <li id="NomeMeal"><h4>Nome: {meal.name}</h4></li>
                     <li>
@@ -98,8 +104,9 @@ const MealsHome = () => {
                       ))}
                     </li>
                   </div>
-                </div>
-              </ul>
+                </ul>
+              </div>
+
             </div>
           );
         })}

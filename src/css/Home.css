@@ -43,7 +43,7 @@
 
 .my-day-circle-container {
   all: unset;
-  background: pink;
+  background: #FFBFA2;
   border-radius: 5px;
   width: 10%;
   padding: 2%;
@@ -65,11 +65,11 @@
 
 .my-day-circle {
   all: unset;
-  background: beige;
+  background: #FFBFA2;
 }
 
 .my-day-circle-container:first-of-type {
-  background: burlywood;
+  background: #DE581B;
 }
 
 .my-day-circle-today-text {
@@ -95,7 +95,7 @@
   display: flex;
   width: 100%;
   border-radius: 6px;
-  /* background: beige; */
+ background: #F8D6C7; 
   margin-bottom: 15%;
   text-align: left;
 
@@ -114,14 +114,14 @@ ul {
 
 .meal-info {
   display: flex;
-
+  flex-direction: column;
 }
 
 .meal-details {
-  flex: 2;
-  /* flex: 2 1; */
-  padding-left: 40vw;
-  margin-top: -40%;
+  position: relative;
+  left: 40%;
+  width: fit-content;
+  max-width: 50%;
 }
 
 #NomeMeal {}
@@ -132,4 +132,7 @@ ul {
 
 img{
   width: 20%;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 4%;
+  border-radius: 5px;
 }
