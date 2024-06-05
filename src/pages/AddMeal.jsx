@@ -1,5 +1,8 @@
+import '../addmeal.css';
+import '../App.css';
 import React, { useState } from 'react';
 import sendMealInformation from '../api/meals';
+
 const AddMeal = () => {
   const [name, setName] = useState('');
   const [hours, setHours] = useState(0);
@@ -13,6 +16,7 @@ const AddMeal = () => {
     }
   ]);
 
+  
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
@@ -34,7 +38,7 @@ const AddMeal = () => {
       pills
     });
 
-    setStatus(data.message)
+    setStatus(data.message);
   };
 
   const handlePillsChange = (index, field, value) => {
@@ -51,66 +55,56 @@ const AddMeal = () => {
       return;
     }
 
-    if (delta)
     setNumPills(numPills + delta);
   }
 
   return (
-    <div>
-      <h1>Add Meal</h1>
+    <div className="AddMeal">
+      <h1>Adicionar Alarme</h1>
 
       <form onSubmit={handleSubmit}>
-        <label>
-          Name:
+        <div className="form-group">
+          <label>Momento do dia</label>
           <input type="text" value={name} onChange={handleNameChange} />
-        </label>
-        <br />
-        <label>
-          Hours:
-          <input type="number" value={hours} onChange={handleHoursChange} />
-        </label>
-        <br />
-        <label>
-          Minutes:
-          <input type="number" value={minutes} onChange={handleMinutesChange} />
-        </label>
-        <br />
-        <label>
-          Pills:
-          {Array.from({ length: numPills + 1 }, (_, i) => i).map(i => (
-            <div key={i}>
-              <label>
-                Name:
-                <input
-                  type="text"
-                  value={pills[i]?.name || ''}
-                  onChange={(e) => handlePillsChange(i, 'name', e.target.value)}
-                  key={i}
-                />
-              </label>
-              <br />
-              <label>
-                Container:
-                <input
-                  type="text"
-                  value={pills[i]?.container || ''}
-                  onChange={(e) => handlePillsChange(i, 'container', e.target.value)}
-                  key={i}
-                />
-              </label>
-              <br />
-              <br />
+        </div>
+        <div className="Horário">
+          <div className="time-input">
+            <input type="number" value={hours} onChange={handleHoursChange} />
+            <span>Horas</span>
+          </div>
+          <div className="time-input">
+            <input type="number" value={minutes} onChange={handleMinutesChange} />
+            <span>Minutos</span>
+          </div>
+        </div>
+
+        <div className="Medicamentos">
+          <label>Medicamentos</label>
+          {Array.from({ length: numPills }, (_, i) => (
+            <div key={i} className="form-group">
+              <label>Nome</label>
+              <input
+                type="text"
+                value={pills[i]?.name || ''}
+                onChange={(e) => handlePillsChange(i, 'name', e.target.value)}
+              />
+              <label>Nº Tubo</label>
+              <input
+                type="text"
+                value={pills[i]?.container || ''}
+                onChange={(e) => handlePillsChange(i, 'container', e.target.value)}
+              />
             </div>
           ))}
-        </label>
+        </div>
         <button type="button" onClick={() => changeNumPills(1)}>
-          Add Pill
+          + adicionar medicamento
         </button>
         <button type="button" onClick={() => changeNumPills(-1)}>
-          Remove Pill
+          - remover medicamento
         </button>
         <br />
-        <button type="submit">Submit</button>
+        <button type="submit">Confirmar</button>
       </form>
       <p>{status}</p>
     </div>

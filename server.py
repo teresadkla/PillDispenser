@@ -4,15 +4,15 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-'''import serial as s'''
+# import serial as s
 import schedule
 import time
 import json
 import threading
 # import multiprocessing
 import os
-'''
-ser = s.Serial(
+
+'''ser = s.Serial(
     port='COM5',
     baudrate=9600,
     timeout=1
@@ -79,11 +79,11 @@ def list():
 
 #################### READ WRITE TO ARDUINO
 def read():
-    #data = ser.readline()
+    data = ser.readline()
     return data.decode().strip()
 
 def write(msg):
-    #ser.write(bytes(msg, 'utf-8'))
+    ser.write(bytes(msg, 'utf-8'))
     time.sleep(2)
 
 #################### READ WRITE TO FILE
