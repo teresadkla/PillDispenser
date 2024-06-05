@@ -2,6 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { getMeals } from '../../api/meals';
 import { Link } from 'react-router-dom';
 
+const imageMapping = {
+  'manhã': 'path/to/morning-image.png',
+  'almoço': 'path/to/lunch-image.png',
+  'tarde': 'path/to/afternoon-image.png',
+  'jantar': 'path/to/dinner-image.png',
+  'noite': 'path/to/night-image.png',
+  'madrugada': 'path/to/early-morning-image.png'
+};
+
 const MealsHome = () => {
   const [meals, setMeals] = useState([]);
 
@@ -34,29 +43,55 @@ const MealsHome = () => {
     }
   };
 
+  const sortMealsByCurrentTime = (meals) => {
+    const currentTime = new Date();
+    const currentMinutes = currentTime.getHours() * 60 + currentTime.getMinutes();
+    return meals.slice().sort((a, b) => {
+      const mealAMinutes = a.hours * 60 + a.minutes;
+      const mealBMinutes = b.hours * 60 + b.minutes;
+      
+      const diffA = (mealAMinutes - currentMinutes + 1440) % 1440;
+      const diffB = (mealBMinutes - currentMinutes + 1440) % 1440;
+     
+      return diffA - diffB;
+    });
+  };
+
+  const sortedMeals = sortMealsByCurrentTime(meals);
+
   return (
     <div id="CardPlano">
       <ul>
-        {meals.map((meal) => (
-          <div id="card" key={meal.id}>
-            <ul>
-              <li>Name: {meal.name}</li>
-              <li>
-                Time: {meal.hours}:{meal.minutes} - {getTimePeriod(meal.hours)}
-              </li>
-              <li>
-                Pills:
-                {meal.pills.map((pill) => (
-                  <ul key={pill.id}>
-                    <li>Name: {pill.name}</li>
-                    <li>Container: {pill.container}</li>
-                    <br />
-                  </ul>
-                ))}
-              </li>
-            </ul>
-          </div>
-        ))}
+        {sortedMeals.map((meal) => {
+          const period = getTimePeriod(meal.hours);
+          const imageUrl = imageMapping[period];
+          
+          return (
+            <div id="card" key={meal.id}>
+              <ul>
+                <li className="meal-time">
+                  <h5>{meal.hours}:{meal.minutes.toString().padStart(2, '0')} - {period}</h5>
+                </li>
+                <div id="meal-info">
+                  <div className="meal-image">
+                    <img src={imageUrl} alt={period} />
+                  </div>
+                  <div className="meal-details">
+                    <li id="NomeMeal"><h4>Nome: {meal.name}</h4></li>
+                    <li>
+                      {meal.pills.map((pill) => (
+                        <ul key={pill.id}>
+                          <li id="NamePill"><h5>Comprimido: {pill.name}</h5></li>
+                          <li id="ContainerHome"><h5>Container: {pill.container}</h5></li>
+                        </ul>
+                      ))}
+                    </li>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          );
+        })}
       </ul>
     </div>
   );

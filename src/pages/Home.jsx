@@ -38,7 +38,7 @@ function Home() {
       {/* <Day dia="16" diasemana="quinta" tubo="tubo x" /> */}
 
       <h2 id="PlanoHoje">Plano de hoje</h2>
-      <h6 id="refeicao">Pequeno Almoço - 8h15min</h6>
+      {/* <h6 id="refeicao">Pequeno Almoço - 8h15min</h6> */}
 
       {/* <Cardplano nome="Nomex" dose="1" tubo="tubo x" /> */}
       <MealsHome/>
