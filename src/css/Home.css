@@ -44,14 +44,10 @@
 .my-day-circle-container {
   all: unset;
   background: #FFBFA2;
-  border-radius: 5px;
+  border-radius: 8px;
   width: 10%;
   padding: 2%;
 }
-
-.my-prev-week-arrow {}
-
-.my-next-week-arrow {}
 
 .my-day-box {
   all: unset;
@@ -76,10 +72,6 @@
   display: none;
 }
 
-.my-day-circle-unavailable {}
-
-.my-day-circle-unavailable-text {}
-
 .my-day-circle-selected {
   background-color: #61dafb;
 }
@@ -94,7 +86,7 @@
 #card {
   display: flex;
   width: 100%;
-  border-radius: 6px;
+  border-radius: 10px;
  background: #F8D6C7; 
   margin-bottom: 15%;
   text-align: left;
@@ -110,6 +102,8 @@ ul {
 .meal-time {
   position: relative;
   top: -20%;
+  border-radius: 10px 10px 0px 0px;
+  padding-left: 5%;
 }
 
 .meal-info {
@@ -124,15 +118,9 @@ ul {
   max-width: 50%;
 }
 
-#NomeMeal {}
-
-#NamePill {}
-
-#ContainerHome {}
-
 img{
   width: 20%;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.5);
   padding: 4%;
-  border-radius: 5px;
+  border-radius: 10px;
 }

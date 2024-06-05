@@ -89,9 +89,9 @@ const MealsHome = () => {
                   </li>
 
 
-                  <div className="meal-image">
+                 
                     <img src={imageUrl} alt={period} />
-                  </div>
+                  
                   
                   <div className="meal-details">
                     <li id="NomeMeal"><h4>Nome: {meal.name}</h4></li>
