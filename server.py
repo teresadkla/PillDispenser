@@ -209,10 +209,10 @@ def add_meal():
   new_meal = request.json
   for meal in all_meals:
     if meal.name == new_meal['name']:
-      return jsonify({'message': 'Meal already exists'}), 400
+      return jsonify({'message': 'Alarme já existente'}), 400
 
   create_meal(new_meal)
-  return jsonify({'message': 'Meal added successfully'}), 201
+  return jsonify({'message': 'Alarme adicionado com sucesso'}), 201
 
 @app.route('/pills', methods=['POST'])
 def add_pills():
@@ -221,8 +221,8 @@ def add_pills():
   for i, meal in all_meals:
     if meal.name == new_pills['meal']:
       add_pills_to_meal(i, create_pills(new_pills['pills']))
-      return jsonify({'message': 'Pills added successfully'}), 201
-  return jsonify({'message': 'Pills added successfully'}), 201
+      return jsonify({'message': 'Comprimidos adicionados com sucesso'}), 201
+  return jsonify({'message': 'Comprimidos adicionados com sucesso'}), 201
 
 if __name__ == '__main__':
     

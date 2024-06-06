@@ -15,7 +15,7 @@ export const AlarmProvider = ({ children }) => {
         const currentHours = now.getHours();
         const currentMinutes = now.getMinutes();
 
-        if (alarmAcknowledged) return; // Don't check alarms if already acknowledged
+        if (alarmAcknowledged) return; 
 
         let cHours;
         let cMinutes;
@@ -50,10 +50,10 @@ export const AlarmProvider = ({ children }) => {
       }
     };
 
-    const intervalId = setInterval(checkAlarms, 10000); // Check every minute
-    checkAlarms(); // Initial check
+    const intervalId = setInterval(checkAlarms, 10000); 
+    checkAlarms(); 
 
-    return () => clearInterval(intervalId); // Cleanup on unmount
+    return () => clearInterval(intervalId);
   }, [alarmAcknowledged]);
 
   return (

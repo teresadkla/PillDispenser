@@ -7,8 +7,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AddMeal from './pages/AddMeal';
 import ListMeals from './pages/ListMeals';
 import AddPills from './pages/AddPills';
-// import CardPlano from './pages/Cardplano';
-// import Day from './pages/Day';
 import Home from './pages/Home';
 import ShowMeal from './pages/showMeal';
 import { AlarmProvider } from './pages/AlarmContext';
@@ -23,8 +21,7 @@ const router = createBrowserRouter([
       { path: 'list_meals', element: <ListMeals /> },
       { path: 'show_meal', element: <ShowMeal /> },
       { path: 'add_pills', element: <AddPills /> },
-      // { path: 'card', element: <CardPlano /> },
-      // { path: 'day', element: <Day /> },
+  
     ]
   },
 ]);
