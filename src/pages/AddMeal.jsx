@@ -65,7 +65,7 @@ const AddMeal = () => {
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Momento do dia</label>
-          <input type="text" value={name} onChange={handleNameChange} />
+          <input type="text"  placeholder="Nome da refeição, propósito da medica..." value={name} onChange={handleNameChange} />
         </div>
         <div className="Horário">
           <div className="time-input">
@@ -85,6 +85,7 @@ const AddMeal = () => {
               <label>Nome</label>
               <input
                 type="text"
+                placeholder="Nome do medicamento"
                 value={pills[i]?.name || ''}
                 onChange={(e) => handlePillsChange(i, 'name', e.target.value)}
               />
