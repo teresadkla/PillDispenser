@@ -105,7 +105,9 @@ const MealsHome = () => {
                   <li className="meal-time" style={{ backgroundColor }}>
                     <h5>{meal.hours}:{meal.minutes.toString().padStart(2, '0')} - {period}</h5>
                   </li>
+                  <div className='meal-img'>
                   <img src={imageUrl} alt={period} />
+                  </div>
                   <div className="meal-details">
                     <li id="NomeMeal"><h4>Nome: {meal.name}</h4></li>
                     <li>

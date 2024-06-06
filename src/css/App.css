@@ -84,7 +84,7 @@ body {
   display: flex;
   bottom: 0;
   gap: 15%;
-  background: bisque;
+  background: white;
   padding: 2%;
   width: 100%;
   justify-content: center;
@@ -93,3 +93,8 @@ body {
 }
 
 
+#navbar a{
+
+    text-decoration: none;
+
+}
