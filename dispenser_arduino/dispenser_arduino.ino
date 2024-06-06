@@ -28,8 +28,8 @@ void setup() {
   // SERVOS
   up.attach(5);
   down.attach(6);
-  doseador.attach(7);
-  gaveta.attach(8);
+  doseador.attach(8);
+  gaveta.attach(10);
 
   //sensor
   pinMode(echoPin, INPUT);
@@ -109,7 +109,7 @@ void loop() {
     distance = duration / 58.2;
     
     //verificar se e detetado movimento
-    if(distance <= 10){
+    if(distance <= 5){
       // abrir porta
       gaveta.write(180);
       delay(1000);
