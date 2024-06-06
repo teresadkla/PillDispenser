@@ -9,11 +9,9 @@ const Nav = () => {
       <Link to="/add_meal">Alarme</Link>
         </h4>
         <h4>
-        <Link to="/">Home</Link> 
+        <Link to="/">Planeamento</Link> 
         </h4>
-        <h4>
-        <Link to="/areapessoal">Área Pessoal</Link> 
-        </h4>
+  
 
       {/* <ul>
         <li >
