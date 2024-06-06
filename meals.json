@@ -1,374 +1,96 @@
 {
     "meals": [
         {
-            "name": "a",
-            "hours": 12,
-            "minutes": 12,
-            "pills": [
-                {
-                    "name": "a",
-                    "container": "1",
-                    "container_angle": 36
-                },
-                {
-                    "name": "v",
-                    "container": "4",
-                    "container_angle": 144
-                }
-            ]
-        },
-        {
-            "name": "almoco",
-            "hours": 11,
-            "minutes": 11,
-            "pills": [
-                {
-                    "name": "a",
-                    "container": "1",
-                    "container_angle": 36
-                },
-                {
-                    "name": "b",
-                    "container": "3",
-                    "container_angle": 108
-                }
-            ]
-        },
-        {
-            "name": "asas",
-            "hours": 12,
-            "minutes": 32,
-            "pills": [
-                {
-                    "name": "d",
-                    "container": "1",
-                    "container_angle": 36
-                },
-                {
-                    "name": "f",
-                    "container": "2",
-                    "container_angle": 72
-                }
-            ]
-        },
-        {
-            "name": "asashjgj",
-            "hours": 12,
-            "minutes": 32,
-            "pills": [
-                {
-                    "name": "d",
-                    "container": "1",
-                    "container_angle": 36
-                },
-                {
-                    "name": "f",
-                    "container": "2",
-                    "container_angle": 72
-                }
-            ]
-        },
-        {
-            "name": "ee",
-            "hours": 12,
-            "minutes": 11,
-            "pills": [
-                {
-                    "name": "b",
-                    "container": "1",
-                    "container_angle": 36
-                },
-                {
-                    "name": "bb",
-                    "container": "2",
-                    "container_angle": 72
-                }
-            ]
-        },
-        {
-            "name": "aaaaaa",
-            "hours": "01",
-            "minutes": "02",
-            "pills": [
-                {
-                    "name": "m",
-                    "container": "1",
-                    "container_angle": 36
-                },
-                {
-                    "name": "nn",
-                    "container": "2",
-                    "container_angle": 72
-                }
-            ]
-        },
-        {
-            "name": "mm",
-            "hours": "01",
-            "minutes": "04",
-            "pills": [
-                {
-                    "name": "m",
-                    "container": "2",
-                    "container_angle": 72
-                },
-                {
-                    "name": "w",
-                    "container": "4",
-                    "container_angle": 144
-                }
-            ]
-        },
-        {
-            "name": "qqq",
-            "hours": 23,
-            "minutes": 13,
-            "pills": [
-                {
-                    "name": "a",
-                    "container": "1",
-                    "container_angle": 36
-                },
-                {
-                    "name": "w",
-                    "container": "2",
-                    "container_angle": 72
-                }
-            ]
-        },
-        {
-            "name": "qqqaaa",
-            "hours": 23,
+            "name": "Sistema Cardiovascular",
+            "hours": 22,
             "minutes": 15,
             "pills": [
                 {
-                    "name": "a",
+                    "name": "Atenol",
                     "container": "1",
                     "container_angle": 36
                 },
                 {
-                    "name": "w",
+                    "name": "Lisinopril",
                     "container": "2",
                     "container_angle": 72
                 }
             ]
         },
         {
-            "name": "adghagdhgad",
-            "hours": 12,
-            "minutes": 20,
-            "pills": [
-                {
-                    "name": "jajshjahs",
-                    "container": "2",
-                    "container_angle": 72
-                }
-            ]
-        },
-        {
-            "name": "jantar23",
-            "hours": 20,
-            "minutes": 35,
-            "pills": [
-                {
-                    "name": "cora\u00e7\u00e3o",
-                    "container": "1",
-                    "container_angle": 36
-                },
-                {
-                    "name": "rins",
-                    "container": "3",
-                    "container_angle": 108
-                }
-            ]
-        },
-        {
-            "name": "madrugaaa",
-            "hours": "02",
-            "minutes": 30,
-            "pills": [
-                {
-                    "name": "entregapill",
-                    "container": "3",
-                    "container_angle": 108
-                }
-            ]
-        },
-        {
-            "name": "aaaaaaaa1",
-            "hours": "02",
+            "name": "Respira\u00e7\u00e3o",
+            "hours": 23,
             "minutes": 50,
             "pills": [
                 {
-                    "name": "bbbb1",
-                    "container": "1",
-                    "container_angle": 36
-                },
-                {
-                    "name": "ccc2",
-                    "container": "2",
-                    "container_angle": 72
-                },
-                {
-                    "name": "vvvvv",
+                    "name": "Prednisona",
                     "container": "3",
                     "container_angle": 108
                 }
             ]
         },
         {
-            "name": "pequeno almo\u00e7o",
+            "name": "Pequeno Almo\u00e7o",
             "hours": "08",
-            "minutes": 20,
+            "minutes": 50,
             "pills": [
                 {
-                    "name": "escitalopron",
-                    "container": "3",
-                    "container_angle": 108
+                    "name": "Escitaloprin",
+                    "container": "4",
+                    "container_angle": 144
                 }
             ]
         },
         {
-            "name": "dcsdfsf",
-            "hours": 19,
-            "minutes": 19,
-            "pills": [
-                {
-                    "name": "blalblu",
-                    "container": "2",
-                    "container_angle": 72
-                }
-            ]
-        },
-        {
-            "name": "bbbbbb",
-            "hours": 19,
-            "minutes": 28,
-            "pills": [
-                {
-                    "name": "dvbxhcv",
-                    "container": "3",
-                    "container_angle": 108
-                }
-            ]
-        },
-        {
-            "name": "poipoipoipo",
-            "hours": 19,
+            "name": "Neurol\u00f3gico",
+            "hours": 11,
             "minutes": 30,
             "pills": [
                 {
-                    "name": "ookkiok",
+                    "name": "Setralina",
                     "container": "2",
                     "container_angle": 72
-                }
-            ]
-        },
-        {
-            "name": "blab",
-            "hours": "00",
-            "minutes": 25,
-            "pills": [
+                },
                 {
-                    "name": "fsdfsdf",
-                    "container": "3",
-                    "container_angle": 108
-                }
-            ]
-        },
-        {
-            "name": "dfdfdfd",
-            "hours": "00",
-            "minutes": 30,
-            "pills": [
-                {
-                    "name": "fsdfs",
-                    "container": "3",
-                    "container_angle": 108
-                }
-            ]
-        },
-        {
-            "name": "fffxvcf",
-            "hours": "00",
-            "minutes": 34,
-            "pills": [
-                {
-                    "name": "frfdf",
+                    "name": "Diazepam",
                     "container": "1",
                     "container_angle": 36
                 }
             ]
         },
         {
-            "name": "ml",
-            "hours": 15,
-            "minutes": 38,
-            "pills": [
-                {
-                    "name": "m",
-                    "container": "1",
-                    "container_angle": 36
-                }
-            ]
-        },
-        {
-            "name": "kj",
-            "hours": 15,
-            "minutes": "01",
-            "pills": [
-                {
-                    "name": "m",
-                    "container": "1",
-                    "container_angle": 36
-                }
-            ]
-        },
-        {
-            "name": "boom",
-            "hours": 15,
-            "minutes": "08",
-            "pills": [
-                {
-                    "name": "m",
-                    "container": "1",
-                    "container_angle": 36
-                }
-            ]
-        },
-        {
-            "name": "okokokok",
+            "name": "Costas",
             "hours": 17,
-            "minutes": "01",
+            "minutes": "00",
             "pills": [
                 {
-                    "name": "a",
-                    "container": "1",
-                    "container_angle": 36
+                    "name": "Ipobrufeno",
+                    "container": "4",
+                    "container_angle": 144
                 }
             ]
         },
         {
-            "name": "sdbhsbd",
+            "name": "Hipertens\u00e3o",
             "hours": 19,
-            "minutes": "09",
+            "minutes": "00",
             "pills": [
                 {
-                    "name": "sssss",
-                    "container": "2",
-                    "container_angle": 72
+                    "name": "Losartana",
+                    "container": "4",
+                    "container_angle": 144
                 }
             ]
         },
         {
-            "name": "gagagagaga",
-            "hours": 19,
-            "minutes": 12,
+            "name": "Ins\u00f3nia",
+            "hours": "03",
+            "minutes": "00",
             "pills": [
                 {
-                    "name": "sssss",
-                    "container": "2",
-                    "container_angle": 72
+                    "name": "Zolpidem",
+                    "container": "4",
+                    "container_angle": 144
                 }
             ]
         }

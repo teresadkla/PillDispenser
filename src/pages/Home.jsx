@@ -30,7 +30,7 @@ function Home() {
 
   return (
     <div id="testedashboard">
-      <h3 id="olauser">Olá, Teresa</h3>
+      <h3 id="olauser">Olá, Cuidador</h3>
       <h2 id="hoje">Hoje, {formattedToday}</h2>
 
       <ReactWeeklyDayPicker classNames={classNames} />
