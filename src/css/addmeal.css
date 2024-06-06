@@ -3,7 +3,6 @@
   max-width: 400px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #fff;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;

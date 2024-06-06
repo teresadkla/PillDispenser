@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -36,6 +36,11 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+body {
+  font-family: 'Raleway';
+  background-color: #FCEFE9;
 }
 
 /* Media query mobile */
@@ -79,7 +84,7 @@
   display: flex;
   bottom: 0;
   gap: 15%;
-  background: bisque;
+  background: white;
   padding: 2%;
   width: 100%;
   justify-content: center;
@@ -88,6 +93,6 @@
 }
 
 
-
-.LabelPlano {}
-
+#navbar a{
+    text-decoration: none;
+}

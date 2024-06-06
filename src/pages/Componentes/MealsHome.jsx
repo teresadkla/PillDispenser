@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { getMeals } from '../../api/meals';
 import { Link } from 'react-router-dom';
@@ -14,15 +13,16 @@ const imageMapping = {
 
 const colorMapping = {
   'manhã': '#FFD66C',
-  'almoço': '#B3D06A',
-  'tarde': '#DB93F7',
-  'jantar': '#FF9A6C',
-  'noite': '#596DCA',
-  'madrugada': '#5E2C44'
+  'almoço': '#BED681',
+  'tarde': '#EEA6DE',
+  'jantar': '#E28888',
+  'noite': '#98A3D3',
+  'madrugada': '#B07692'
 };
 
 const MealsHome = () => {
   const [meals, setMeals] = useState([]);
+  const [selectedPeriod, setSelectedPeriod] = useState('all');
 
   useEffect(() => {
     const fetchMeals = async () => {
@@ -59,33 +59,54 @@ const MealsHome = () => {
     return meals.slice().sort((a, b) => {
       const mealAMinutes = a.hours * 60 + a.minutes;
       const mealBMinutes = b.hours * 60 + b.minutes;
-      
+
       const diffA = (mealAMinutes - currentMinutes + 1440) % 1440;
       const diffB = (mealBMinutes - currentMinutes + 1440) % 1440;
-     
+
       return diffA - diffB;
     });
   };
 
-  const sortedMeals = sortMealsByCurrentTime(meals);
+  const handlePeriodChange = (e) => {
+    setSelectedPeriod(e.target.value);
+  };
+
+  let filteredMeals = meals;
+  if (selectedPeriod !== 'all') {
+    filteredMeals = meals.filter(meal => getTimePeriod(meal.hours) === selectedPeriod);
+  }
+
+  const sortedMeals = sortMealsByCurrentTime(filteredMeals);
 
   return (
     <div id="CardPlano">
+      <div className='filtro'>
+        <p>Momento do dia:</p>
+      <select id='SelectMomento' value={selectedPeriod} onChange={handlePeriodChange}>
+        <option value="all">Todos os momentos</option>
+        <option value="manhã">Manhã</option>
+        <option value="almoço">Almoço</option>
+        <option value="tarde">Tarde</option>
+        <option value="jantar">Jantar</option>
+        <option value="noite">Noite</option>
+        <option value="madrugada">Madrugada</option>
+      </select>
+      </div>
       <ul>
         {sortedMeals.map((meal) => {
           const period = getTimePeriod(meal.hours);
           const imageUrl = imageMapping[period];
           const backgroundColor = colorMapping[period];
-          
+
           return (
-            <div id="card" key={meal.id} style={{ backgroundColor }}>
-              <ul>
-                <li className="meal-time">
-                  <h5>{meal.hours}:{meal.minutes.toString().padStart(2, '0')} - {period}</h5>
-                </li>
-                <div id="meal-info">
-                  <div className="meal-image">
-                    <img src={imageUrl} alt={period} />
+            <div id="card" key={meal.id}>
+              <div>
+                <ul className="meal-info">
+                  <li className="meal-time" style={{ backgroundColor }}>
+                    <h5>{meal.hours}:{meal.minutes.toString().padStart(2, '0')} - {period}</h5>
+                  </li>
+                  <div className='meal-img'>
+                  <img src={imageUrl} alt={period} />
                   </div>
                   <div className="meal-details">
                     <li id="NomeMeal"><h4>Nome: {meal.name}</h4></li>
@@ -98,8 +119,8 @@ const MealsHome = () => {
                       ))}
                     </li>
                   </div>
-                </div>
-              </ul>
+                </ul>
+              </div>
             </div>
           );
         })}

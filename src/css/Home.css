@@ -23,7 +23,7 @@
   grid-column: 2 / span 10;
   grid-row: 5 / span 1;
   width: fit-content;
-  margin-bottom: 15%;
+  margin-top: 15%;
 }
 
 #refeicao {
@@ -43,15 +43,11 @@
 
 .my-day-circle-container {
   all: unset;
-  background: pink;
-  border-radius: 5px;
+  background: #FFBFA2;
+  border-radius: 8px;
   width: 10%;
   padding: 2%;
 }
-
-.my-prev-week-arrow {}
-
-.my-next-week-arrow {}
 
 .my-day-box {
   all: unset;
@@ -65,20 +61,16 @@
 
 .my-day-circle {
   all: unset;
-  background: beige;
+  background: #FFBFA2;
 }
 
 .my-day-circle-container:first-of-type {
-  background: burlywood;
+  background: #DE581B;
 }
 
 .my-day-circle-today-text {
   display: none;
 }
-
-.my-day-circle-unavailable {}
-
-.my-day-circle-unavailable-text {}
 
 .my-day-circle-selected {
   background-color: #61dafb;
@@ -94,10 +86,11 @@
 #card {
   display: flex;
   width: 100%;
-  border-radius: 6px;
-  /* background: beige; */
+  border-radius: 10px;
+ background: #F8D6C7; 
   margin-bottom: 15%;
   text-align: left;
+  font-size: 1.1rem;
 
 }
 
@@ -110,26 +103,46 @@ ul {
 .meal-time {
   position: relative;
   top: -20%;
+  border-radius: 10px 10px 0px 0px;
+  padding-left: 5%;
 }
 
 .meal-info {
   display: flex;
-
+  flex-direction: column;
 }
 
 .meal-details {
-  flex: 2;
-  /* flex: 2 1; */
-  padding-left: 40vw;
-  margin-top: -40%;
+  position: relative;
+  left: 40%;
+  width: fit-content;
+  max-width: 50%;
+  margin: -80% 0 0 0;
 }
-
-#NomeMeal {}
-
-#NamePill {}
-
-#ContainerHome {}
 
 img{
   width: 20%;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 4%;
+  border-radius: 10px;
+  margin: 0 0 50% 0;
+}
+
+.filtro {
+  width: 100%;
+  gap: 5%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15%;
+}
+#SelectMomento{
+
+  font-family: 'Raleway';
+  font-size: 1rem;
+  padding: 4%;
+  background: #FFBFA2;
+  border-radius: 50px;
+  border-style: none;
+  width: 100%;
+  height: 50%;
 }
