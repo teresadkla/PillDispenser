@@ -116,6 +116,7 @@ ul {
   left: 40%;
   width: fit-content;
   max-width: 50%;
+  margin: -80% 0 0 0;
 }
 
 img{
@@ -123,4 +124,5 @@ img{
   background: rgba(255, 255, 255, 0.5);
   padding: 4%;
   border-radius: 10px;
+  margin: 0 0 50% 0;
 }
