@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { getMeals } from '../../api/meals';
 import { Link } from 'react-router-dom';
@@ -23,6 +22,7 @@ const colorMapping = {
 
 const MealsHome = () => {
   const [meals, setMeals] = useState([]);
+  const [selectedPeriod, setSelectedPeriod] = useState('all');
 
   useEffect(() => {
     const fetchMeals = async () => {
@@ -67,10 +67,31 @@ const MealsHome = () => {
     });
   };
 
-  const sortedMeals = sortMealsByCurrentTime(meals);
+  const handlePeriodChange = (e) => {
+    setSelectedPeriod(e.target.value);
+  };
+
+  let filteredMeals = meals;
+  if (selectedPeriod !== 'all') {
+    filteredMeals = meals.filter(meal => getTimePeriod(meal.hours) === selectedPeriod);
+  }
+
+  const sortedMeals = sortMealsByCurrentTime(filteredMeals);
 
   return (
     <div id="CardPlano">
+      <div className='filtro'>
+        <p>Momento do dia:</p>
+      <select id='SelectMomento' value={selectedPeriod} onChange={handlePeriodChange}>
+        <option value="all">Todos os momentos</option>
+        <option value="manhã">Manhã</option>
+        <option value="almoço">Almoço</option>
+        <option value="tarde">Tarde</option>
+        <option value="jantar">Jantar</option>
+        <option value="noite">Noite</option>
+        <option value="madrugada">Madrugada</option>
+      </select>
+      </div>
       <ul>
         {sortedMeals.map((meal) => {
           const period = getTimePeriod(meal.hours);
@@ -78,21 +99,13 @@ const MealsHome = () => {
           const backgroundColor = colorMapping[period];
 
           return (
-            <div id="card" key={meal.id} >
-
-
-              <div >
+            <div id="card" key={meal.id}>
+              <div>
                 <ul className="meal-info">
-
                   <li className="meal-time" style={{ backgroundColor }}>
                     <h5>{meal.hours}:{meal.minutes.toString().padStart(2, '0')} - {period}</h5>
                   </li>
-
-
-                 
-                    <img src={imageUrl} alt={period} />
-                  
-                  
+                  <img src={imageUrl} alt={period} />
                   <div className="meal-details">
                     <li id="NomeMeal"><h4>Nome: {meal.name}</h4></li>
                     <li>
@@ -106,7 +119,6 @@ const MealsHome = () => {
                   </div>
                 </ul>
               </div>
-
             </div>
           );
         })}

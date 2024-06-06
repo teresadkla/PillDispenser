@@ -239,6 +239,23 @@
                     "container_angle": 72
                 }
             ]
+        },
+        {
+            "name": "tarde medica",
+            "hours": 18,
+            "minutes": 15,
+            "pills": [
+                {
+                    "name": "alergias",
+                    "container": "2",
+                    "container_angle": 72
+                },
+                {
+                    "name": "cabe\u00e7a",
+                    "container": "1",
+                    "container_angle": 36
+                }
+            ]
         }
     ]
 }
